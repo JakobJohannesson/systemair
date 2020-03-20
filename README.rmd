@@ -1,0 +1,47 @@
+---
+title: "Bolagsanalys Systemair"
+author:
+- Jakob Johannesson
+- Börsgruppen Asset Management
+date: "`r Sys.Date()`"
+always_allow_html: yes
+output:
+  md_document:
+  variant: markdown_github
+  
+---
+
+# Nyckelfaktorer
+
+## Förvärvsdriven bransch
+
+Kamp mellan halvstora spelare om mindre aktörer på den fragmenterade marknaden.
+
+## Historiskt fint bolag
+
+Omsättningstillväxten har mellan 2005 och 2019 varit 11,325 procent.
+
+## Pilotskolan
+
+Gerald Engström som är styrelseordförande i Systemair grundade företaget och äger idag 42,6 procent av alla aktier i företaget.
+
+# Bakgrund
+
+Systemair är Skinnskattbergs motor. Se kartan för att få en uppfattning om var Skinnskatteberg befinner sig i Sverige.
+
+
+## Hämtar data
+```{r eval=FALSE}
+library(borsdata)
+year<-fetch_year(221,key = key)
+r12<-fetch_r12(221,key = key)
+kvartal<-fetch_quarter(221,key = key)
+```
+
+```{r out.width='100%', fig.height=6, eval=require('leaflet'), echo=FALSE}
+library(leaflet)
+leaflet()  %>% setView(15.703929, 59.844885, zoom = 17) %>% 
+  addMarkers(15.703929, 59.844885, popup="Systemair AB, Skinnskatteberg") %>% addTiles()
+```
+
+
