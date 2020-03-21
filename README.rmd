@@ -38,10 +38,13 @@ r12<-fetch_r12(221,key = key)
 kvartal<-fetch_quarter(221,key = key)
 ```
 
-```{r out.width='100%', fig.height=6, eval=require('leaflet'), echo=FALSE}
-library(leaflet)
-leaflet()  %>% setView(15.703929, 59.844885, zoom = 17) %>% 
-  addMarkers(15.703929, 59.844885, popup="Systemair AB, Skinnskatteberg") %>% addTiles()
+
+# Figur över utvecklingen 2010-2020e
+
+```{r echo=FALSE, message=FALSE}
+library(magick)
+image_read("media/cagr.png")
 ```
+
 
 
