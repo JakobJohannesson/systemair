@@ -44,6 +44,16 @@ kvartal<-fetch_quarter(221,key = key)
 ```{r echo=FALSE, message=FALSE}
 library(magick)
 image_read("media/cagr.png")
+image_read("media/kvartalsdata.png")
+```
+
+Att jämföra med till exempelvis Lindab
+
+
+```{r echo=FALSE, message=FALSE}
+library(magick)
+image_read("media/lindab-year.png")
+image_read("media/lindab-kvartal.png")
 ```
 
 
